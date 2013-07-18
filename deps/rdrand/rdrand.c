@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 
-/* From http://software.intel.com/en-us/articles/intel-digital-random-number-generator-drng-software-implementation-guide/ */
+// Taken from http://smackerelofopinion.blogspot.com/2012/08/simple-performance-test-of-rdrand.html 
+// and from http://software.intel.com/en-us/articles/intel-digital-random-number-generator-drng-software-implementation-guide/ 
 
 #include "rdrand.h"
 
