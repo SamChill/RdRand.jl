@@ -6,7 +6,7 @@ else
 	SLIB = so
 endif
 
-all:
+librdrand.$(SLIB): rdrand/rdrand.c
 	cc -shared -fPIC -O2 rdrand/rdrand.c -o librdrand.$(SLIB) -Irdrand
 
 clean:
