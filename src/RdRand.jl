@@ -15,6 +15,15 @@ end
 rdrand16() = ccall( (:rdrand16,librdrand), Uint16, ())
 rdrand32() = ccall( (:rdrand32,librdrand), Uint32, ())
 rdrand64() = ccall( (:rdrand64,librdrand), Uint64, ())
+
+#rdrand64 should be uniform from 0 to 2^64
+#but rdrand() isn't quite uniform on [0,1].
+#What does it mean for a floating point number to be
+#"uniform" from [0,1]? Here the smallest non-zero
+#number is 1/2^64, which is about 5x10^-20.
+#Since floating point numbers can represent much
+#smaller quantities, should some greater care be taken?
+#This function does pass diehard suite of tests.
 rdrand() = rdrand64()/typemax(Uint64)
 
 end
