@@ -7,6 +7,8 @@ The RdRand package provides an interface for using Intel's [RDRAND][rdrand]
 instruction, which provides truly random numbers. The instruction is currently
 only available on [Ivy Bridge][ivy] processors.
 
+On a 1.8 GHz Intel Core i5 (i5-3427U) each call takes about 50 nanoseconds.
+
 [rdrand]: http://en.wikipedia.org/wiki/RdRand
 [ivy]: http://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)
 
