@@ -8,10 +8,11 @@ instruction, which provides extremely high quality random numbers. The instructi
 only available on [Ivy Bridge][ivy] processors.
 
 On a 1.8 GHz Intel Core i5 (i5-3427U) each `rdrand()` call takes about 50
-nanoseconds, while `rand()` takes about 5 nanoseconds.
+nanoseconds, while `rand()`, which uses a [SIMD Mersenne Twister implementation][mt], takes about 5 nanoseconds.
 
 [rdrand]: http://en.wikipedia.org/wiki/RdRand
 [ivy]: http://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)
+[mt]: http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/#dSFMT
 
 ## API
 
