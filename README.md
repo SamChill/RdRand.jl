@@ -1,7 +1,7 @@
 RdRand.jl
 =========
 
-# Introduction
+## Introduction
 
 The RdRand package provides an interface for using Intel's [RDRAND][rdrand]
 instruction, which provides truly random numbers. The instruction is currently
@@ -10,7 +10,7 @@ only available on [Ivy Bridge][ivy] processors.
 [rdrand]: http://en.wikipedia.org/wiki/RdRand
 [ivy]: http://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)
 
-# API
+## API
 
 * `rdrand()`: provides a random number on the interval [0,1]
 * `rdrand16()`: provides a Uint16 random number
