@@ -14,6 +14,12 @@ nanoseconds, while `rand()`, which uses a [SIMD Mersenne Twister implementation]
 [ivy]: http://en.wikipedia.org/wiki/Ivy_Bridge_(microarchitecture)
 [mt]: http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/SFMT/#dSFMT
 
+## Installation
+
+In the Julia interpreter type:
+
+`Pkg.add("RdRand")`
+
 ## API
 
 * `rdrand()`: provides a random number on the interval [0,1]
