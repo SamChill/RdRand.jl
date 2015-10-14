@@ -12,9 +12,9 @@ if rdrand_cpucheck() != 0
     error("RdRand: unsupported cpu")
 end
 
-rdrand16() = ccall( (:rdrand16,librdrand), Uint16, ())
-rdrand32() = ccall( (:rdrand32,librdrand), Uint32, ())
-rdrand64() = ccall( (:rdrand64,librdrand), Uint64, ())
+rdrand16() = ccall( (:rdrand16,librdrand), UInt16, ())
+rdrand32() = ccall( (:rdrand32,librdrand), UInt32, ())
+rdrand64() = ccall( (:rdrand64,librdrand), UInt64, ())
 
 #rdrand64 should be uniform from 0 to 2^64
 #but rdrand() isn't quite uniform on [0,1].
@@ -24,6 +24,6 @@ rdrand64() = ccall( (:rdrand64,librdrand), Uint64, ())
 #Since floating point numbers can represent much
 #smaller quantities, should some greater care be taken?
 #This function does pass diehard suite of tests.
-rdrand() = rdrand64()/typemax(Uint64)
+rdrand() = rdrand64()/typemax(UInt64)
 
 end
