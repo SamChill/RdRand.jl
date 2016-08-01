@@ -1,4 +1,3 @@
-p = pwd()
-cd(Pkg.dir("RdRand/deps/"))
-run(`make`)
-cd(p)
+cd(dirname(@__FILE__)) do
+    run(`make`)
+end

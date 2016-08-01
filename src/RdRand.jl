@@ -4,7 +4,7 @@ module RdRand
 
 export rdrand16, rdrand32, rdrand64, rdrand
 
-const librdrand = joinpath(Pkg.dir("RdRand"), "deps", "librdrand")
+const librdrand = joinpath(dirname(@__FILE__), "..", "deps", "librdrand")
 
 rdrand_cpucheck() = ccall( (:cpucheck,librdrand), Int, ())
 
