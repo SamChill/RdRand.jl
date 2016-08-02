@@ -23,9 +23,9 @@ In the Julia interpreter type:
 ## API
 
 * `rdrand()`: provides a random number on the interval [0,1]
-* `rdrand16()`: provides a Uint16 random number
-* `rdrand32()`: provides a Uint32 random number
-* `rdrand64()`: provides a Uint64 random number
+* `rdrand16()`: provides a UInt16 random number
+* `rdrand32()`: provides a UInt32 random number
+* `rdrand64()`: provides a UInt64 random number
 
 ## Randomness
 
